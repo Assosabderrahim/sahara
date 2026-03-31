@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap');
+
+@theme {
+  --font-sans: "Cairo", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Amiri", serif;
+  
+  --color-sand-50: #fffbeb;
+  --color-sand-100: #fef3c7;
+  --color-sand-200: #fde68a;
+  --color-sand-300: #fcd34d;
+  --color-sand-400: #fbbf24;
+  --color-sand-500: #f59e0b;
+  --color-sand-600: #d97706;
+  --color-sand-700: #b45309;
+  --color-sand-800: #92400e;
+  --color-sand-900: #78350f;
+}
+
+body {
+  background-color: var(--color-sand-50);
+  color: var(--color-sand-900);
+  direction: rtl;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.map-container {
+  position: relative;
+  background: #e5e7eb;
+  border-radius: 1rem;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
